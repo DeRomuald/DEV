@@ -11,7 +11,7 @@
 * [Credits](#Credits)
 
 ## Description
-Good day fellow coders, lorem whatever (fill this in later)
+Developers Engaging Virtually (DEV) was conceptualized with the premise of bringing an already large community of developers together using short form blogging
 
 
 ## Demo
