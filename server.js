@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 })); */
 
 app.get('/', function (req, res) {
-    res.render('login', { layout: 'index' });
+    res.render('main', { layout: 'index' });
 })
 
 app.use(express.static(path.join(__dirname, 'public')));
