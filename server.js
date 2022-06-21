@@ -18,6 +18,14 @@ app.get('/', function (req, res) {
     res.render('main', { layout: 'index' });
 })
 
+app.get('/login', function (req, res) {
+    res.render('login.handlebars');
+});
+
+app.get('/homepage', function (req, res) {
+    res.render('homepage.handlebars');
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.listen(PORT, () => console.log('listening on 3001'))
 
