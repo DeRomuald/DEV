@@ -15,5 +15,10 @@ router.get('/main', (req, res) => {
     res.render('main');
 });
 
+router.get('/starter', (req, res) => {
+    res.render('starter');
+});
+
+
 
 module.exports = router;
