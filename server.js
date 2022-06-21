@@ -10,20 +10,17 @@ const PORT = process.env.PORT || 3001;
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-/* app.engine('handlebars', handlebars({
-    layoutsDir: __dirname + '/views/layouts',
-})); */
 
 app.get('/', function (req, res) {
     res.render('main', { layout: 'index' });
 })
 
 app.get('/login', function (req, res) {
-    res.render('login.handlebars');
+    res.render('login');
 });
 
 app.get('/homepage', function (req, res) {
-    res.render('homepage.handlebars');
+    res.render('homepage');
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
