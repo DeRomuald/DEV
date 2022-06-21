@@ -1,6 +1,9 @@
 h1 {
     margin-left: 50%;
     margin-right: 50%;
+}
+
+title {
     font-size: 100px;
     font-family: monospace;
     color: #66fcF1
