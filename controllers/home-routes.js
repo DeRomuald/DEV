@@ -3,9 +3,13 @@ const homeRoutes = require('./home-routes.js')
 
 
 router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
     res.render('login');
 });
-
 
 router.get('/homepage', (req, res) => {
     res.render('homepage');
