@@ -4,7 +4,7 @@
         <span>({{post.post_url}})</span>
     </div>
     <div class="meta">
-        {{post.vote_count}} point(s) by {{post.user.username}} on
+        {{post.like_count}} point(s) by {{post.user.username}} on
         {{post.created_at}}
         |
         <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
@@ -18,7 +18,7 @@
 
     <div>
         <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
+        <button type="button" class="like-btn">like</button>
     </div>
 </form>
 
@@ -34,3 +34,8 @@
     </section>
     {{/each}}
 </div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/like.js"></script>
+{{/if}}

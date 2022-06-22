@@ -1,6 +1,6 @@
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
-const routes = require('./controllers/home-routes');
+const routes = require('./controllers/');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 
 
 app.get('/', function (req, res) {
-    res.render('main', { layout: 'index' });
+    res.render('main');
 })
 
 app.get('/starter', function (req, res) {
