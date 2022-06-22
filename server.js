@@ -1,7 +1,11 @@
-const path = require('path');
+
+//const routes = require('./controllers/');
+const routes = require('./controllers/home-routes');
 const express = require('express');
+const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,8 +25,6 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({});
-
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -38,7 +40,7 @@ sequelize.sync({ force: false }).then(() => {
 
 
 //const hbs = exphbs.create({});
-const routes = require('./controllers/home-routes');
+
 //const express = require('express');
 //const app = express();
 //const sequelize = require('../DEV/config/connections');
@@ -52,6 +54,9 @@ const routes = require('./controllers/home-routes');
 
 /* app.get('/', function (req, res) {
     res.render('main', { layout: 'index' });
+
+app.get('/', function (req, res) {
+    res.render('main');
 })
 
 app.get('/starter', function (req, res) {

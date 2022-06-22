@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User, Post, Comment, Like } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -35,8 +35,8 @@ router.get('/:id', (req, res) => {
       {
         model: Post,
         attributes: ['title'],
-        through: Vote,
-        as: 'voted_posts'
+        through: Like,
+        as: 'liked_posts'
       }
     ]
   })
@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'Dev.', email: 'dev.collaborators@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -76,6 +76,7 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+  // expects {email: 'dev.collaborators@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
       email: req.body.email
@@ -116,7 +117,7 @@ router.post('/logout', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'Dev.', email: 'dev.collaborators@gmail.com', password: 'password1234'}
 
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
