@@ -2,17 +2,17 @@ const { Comment } = require('../models');
 
 const commentdata = [
   {
-    comment_text: 'Nunc rhoncus dui vel sem.',
+    comment_text: 'Hey!',
     user_id: 6,
     post_id: 1
   },
   {
-    comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
+    comment_text: 'Nice post!',
     user_id: 6,
     post_id: 8
   },
   {
-    comment_text: 'Aliquam erat volutpat. In congue.',
+    comment_text: 'Can you explain further??',
     user_id: 3,
     post_id: 10
   },
