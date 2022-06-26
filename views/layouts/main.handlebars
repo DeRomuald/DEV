@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEV.</title>
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
     <div>
         <header>
             <h1>
-                {{!-- <a href="/"></a> --}}
-                {{!-- <img src="/public/img/icon.png" alt="usericon" width="50" height="50" style="float:right" /> --}}
+                <a href="/">DEV.</a> 
+                <img src="/public/img/icon.png" alt="usericon" width="50" height="50" style="float:right" /> --}}
             </h1>
             <section>
-                {{!-- <h2>Whats on your mind?</h2>
-                <input /> --}}
+                 <h2>Whats on your mind?</h2>
+                <textarea class="textarea" placeholder="e.g. I need help..."></textarea>
             </section>
         </header>
+        <main>
         {{{ body }}}
-        {{!-- {{{ body }}} --}}
         </main>
         <footer>
-            {{!-- <a href="https://github.com/DeRomuald/DEV">Our Company</a>
+            <a href="https://github.com/DeRomuald/DEV">Our Company</a>
             <a href="/">Terms</a>
             <a href="/">Privacy Policy</a>
-            <a href="mailto:dev.collaborators@gmail.com">Contact Us</a> --}}
+            <a href="mailto:dev.collaborators@gmail.com">Contact Us</a>
 
         </footer>
     </div>

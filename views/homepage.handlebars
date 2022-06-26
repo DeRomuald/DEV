@@ -1,32 +1,19 @@
 
-    <div>
-        <header>
-            <h1>
-                {{!-- <a href="/"></a> --}}
-                <img src="/public/img/icon.png" alt="usericon" width="50" height="50" style="float:right" />
-            </h1>
-            <section>
-                <h2>Whats on your mind?</h2>
-                <input />
-            </section>
-        </header>
-        <main>
-
-            <body>
-                <section>
-                    <h2>section1-Paths?</h2>
-                </section>
-                <section>
-                    <h2>Posts</h2>
-                </section>
-           
-            {{!-- {{{ body }}} --}}
-        </main>
-        <footer>
-            <a href="https://github.com/DeRomuald/DEV">Our Company</a>
-            <a href="/">Terms</a>
-            <a href="/">Privacy Policy</a>
-            <a href="mailto:dev.collaborators@gmail.com">Contact Us</a>
-
-        </footer>
-    </div>
+    <ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    <article class="post">
+      <div class="title">
+        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
+        <span>({{post.post_url}})</span>
+      </div>
+      <div class="meta">
+        {{post.like_count}} point(s) by {{post.user.username}} on
+        {{post.created_at}}
+        |
+        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ol>
