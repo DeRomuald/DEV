@@ -8,8 +8,8 @@ const sequelize = process.env.JAWSDB_URL
     : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
         host: 'localhost',
         dialect: 'mysql',
-        port: 3306,
-        //password: Cmg116Cmg116
+        port: 3001,
+        password: 'bootcamp.2022'
     });
 
 module.exports = sequelize;
