@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DeRomuald/DEV#readme",
   "dependencies": {
+    "bulma": "^0.9.4",
     "express": "^4.18.1",
     "handlebars": "^4.7.7"
   }
