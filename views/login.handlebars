@@ -1,53 +1,38 @@
+{{#if 'undefined'}}
 <section>
- <div class="field">
-     <h2>Sign In!</h2>
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="username" placeholder="Username">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </p>
-</div>
-<div class="field">
-  <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
-    <span class="icon is-small is-left">
-      <i class="fas fa-lock"></i>
-    </span>
-  </p>
-</div>
+  <div class="field">
+    <h2 class="login">Log In!</h2> <br>
+    <p class="form-input">
+      <input type="username" placeholder="Username">
+    </p>
+  </div>
+  <div class="field">
+    <p class="form-input">
+      <input type="password" placeholder="Password">
+    </p>
+  </div>
+  <div class="form-input">
     <button type="submit" value="submit">Start Engaging</button>
+  </div>
 </section>
-<section>
-      <div class="field">
+{{!-- <section>
+  <div class="field">
     <h2>Sign Up!</h2>
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
-    <span class="icon is-small is-left">
+    <p class="control has-icons-left has-icons-right">
+      <input class="form-input" type="email" placeholder="Email">
+    </p>
+  </div>
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+      <input class="form-input" type="username" placeholder="Username">
       <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </p>
-</div>
- <div class="field">
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="username" placeholder="Username">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-<div class="field">
-  <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
-    <span class="icon is-small is-left">
-      <i class="fas fa-lock"></i>
-    </span>
-  </p>
-</div>
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="form-input" type="password" placeholder="Password">
+      </p>
+    </div>
     <button type="submit" value="submit">Join Our Cult</button>
-</section>
+</section> --}}
 
-<script src="/javascript/login.js"></script>
+<script src="/public/javascript/login.js"></script>
+{{/if}}

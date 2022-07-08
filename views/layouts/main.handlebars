@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEV.</title>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
+</header>
 
 <body>
     <div>
-        <header>
-            <h1>
-                <a href="/">DEV.</a> 
-                <img src="/public/img/icon.png" alt="usericon" width="50" height="50" style="float:right" /> 
-            </h1>
-            <section>
-                 <h2>Whats on your mind?</h2>
-                 <textarea class="textarea" placeholder="e.g. I need help..."></textarea>
-                <button  style="background-color:#45A29E; color: #C5C6C7; font-size:20px;">Enter</Button>
-            </section>
 
-        </header>
+        <head>
+            <h1>
+                <a class="dev" href="/">DEV.</a>
+                <img src="/img/icon.png" alt="usericon" class="imgicon">
+            </h1>
+
+        </head>
+        <nav>
+            {{#if loggedIn}}
+            <script src="/javascript/logout.js"></script>
+            <a href="/dashboard">dashboard</a>
+            {{else}}
+            <a class="loginbutton" href="/login">login</a>
+            {{/if}}
+        </nav>
         <main>
-        {{ body }}
+            {{{ body }}}
         </main>
-        <footer>
-            <a href="https://github.com/DeRomuald/DEV">Our Company</a>
-            <a href="/">Terms</a>
-            <a href="/">Privacy Policy</a>
-            <a href="mailto:dev.collaborators@gmail.com">Contact Us</a>
+        <footer class="footer">
+            <a class="footer-margin" href="https://github.com/DeRomuald/DEV">Our Company</a>
+            <a class="footer-margin" href="/">Terms</a>
+            <a class="footer-margin" href="/">Privacy Policy</a>
+            <a class="footer-margin" href="mailto:dev.collaborators@gmail.com">Contact Us</a>
 
         </footer>
     </div>
