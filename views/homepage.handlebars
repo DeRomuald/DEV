@@ -1,18 +1,23 @@
-<ol>
-  {{#each posts as |post|}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-        <span>({{post.post_url}})</span>
-      </div>
-      <div class="meta">
-        {{post.like_count}} point(s) by {{post.user.username}} on
-        {{post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
-  {{/each}}
-</ol>
+{{#if 'undefined'}}
+<li>
+  <article class="post">
+    <div class="title">
+      <box>
+        <span>Welcome to the Homepage of our Blog Site!</span>
+        <h3>Any thoughts you woould like to share?</h3>
+        <input type="text" class="thoughts-input" name="thoughts"><br><br>
+        <input type="submit">
+    </div>
+    <div class="meta">
+      {{post.like_count}} point(s) by {{post.user.username}} on
+      {{post.created_at}}
+      |
+      <a href="/single-post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+    </div>
+    </box>
+  </article>
+</li>
+<script src="/public/javascript/add-post.js"></script>
+<script src="/public/javascript/edit-post.js"></script>
+<script src="/public/javascript/comment.js"></script>
+{{/if}}

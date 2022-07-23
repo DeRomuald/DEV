@@ -15,16 +15,17 @@
         <head>
             <h1>
                 <a class="dev" href="/">DEV.</a>
-                <img src="/img/icon.png" alt="usericon" class="imgicon">
+                <a class="loginbutton" href="/login">login</a>
+                {{!-- <img src="/img/icon.png" alt="usericon" class="imgicon"> --}}
             </h1>
 
         </head>
         <nav>
             {{#if loggedIn}}
             <script src="/javascript/logout.js"></script>
-            <a href="/dashboard">dashboard</a>
+            <a href="../homepage">Homepage</a>
             {{else}}
-            <a class="loginbutton" href="/login">login</a>
+            {{!-- <a class="loginbutton" href="/login">login</a> --}}
             {{/if}}
         </nav>
         <main>

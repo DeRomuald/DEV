@@ -59,3 +59,12 @@ head {
 .footer-margin {
     margin-right: 20px;
 }
+
+.post {
+    margin-left: 266px;
+}
+
+.thoughts-input {
+    width: 532px;
+    height: 200px;
+}
