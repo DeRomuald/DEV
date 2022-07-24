@@ -39,10 +39,10 @@ sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening on 3001'));
 });
 
-router.get('/', (req, res) => {
+/* router.get('/', (req, res) => {
     res.render('home', { loggedIn: true });
 });
-
+ */
 app.get('/', function (req, res) {
     res.render('main', { layout: 'index' });
 });
